@@ -1,0 +1,21 @@
+<h1>Doctor</h1>
+
+<ol>
+<% @doctor.appointments.each do |apt| %>
+
+  <li>
+    <ul>
+      <li>
+        <h3>Scheduled for <%= apt.time %></h3>
+      </li>
+      <li>
+        <h3>Doctor: <%=link_to apt.doctor.name, doctor_path(apt.doctor)%></h3>
+      </li>
+      <li>
+        <h3>Patient: <%=link_to apt.patient.name, patient_path(apt.patient)%></h3>
+      </li>
+    </ul>
+  </li>
+  <br>
+  <% end %>
+</ol>

@@ -1,0 +1,4 @@
+<h1>These Are Our Doctors:</h1>
+<% @doctors.each do |d| %>
+  <li><%= link_to d.name, doctor_path(d.id) %></li>
+<% end %>
